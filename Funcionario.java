@@ -78,4 +78,21 @@ public class Funcionario
 
         return salarioDescontado;
     }
+    
+    public void atualizarDados(String nome, float salarioBase){
+        this.nome = nome;
+        this.salarioBase = salarioBase;
+    }
+    
+    public void atualizarDados(String nome, float salarioBase, int anosDeServico){
+        this.atualizarDados(nome, salarioBase);
+        this.anosDeServico = anosDeServico;
+    }
+    
+    public void apresentarDados(){
+        System.out.println("Nome: " + this.nome);
+        System.out.println("CPF: " + this.cpf);
+        System.out.println("Salario Base: " + this.salarioBase);
+        System.out.println("Anos de Serviço: " + this.anosDeServico);
+    }
 }
