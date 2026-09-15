@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Funcionario
+comment0.text=\n\ Write\ a\ description\ of\ class\ Funcionario\ here.\n\n\ @author\ Jo\u00E3o\ e\ Blu\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=nome\ cpf
+comment1.target=Funcionario(java.lang.String,\ java.lang.String)
+comment2.params=nome\ cpf\ salarioBase
+comment2.target=Funcionario(java.lang.String,\ java.lang.String,\ float)
+comment3.params=nome\ cpf\ salarioBase\ anosDeServico
+comment3.target=Funcionario(java.lang.String,\ java.lang.String,\ float,\ int)
+comment4.params=salarioBase\ anosDeServico
+comment4.target=float\ calcularSalarioPorSenioridade(float,\ int)
+comment5.params=salario\ numeroDeDiasDeFalta
+comment5.target=float\ aplicarDescontoPorFaltas(float,\ int)
+comment6.params=numeroDeDiasDeFalta
+comment6.target=float\ calcularSalario(int)
+comment7.params=salarioBase\ anosDeServico\ numeroDeDiasDeFalta
+comment7.target=float\ calcularSalario(float,\ int,\ int)
+comment8.params=args
+comment8.target=void\ main(java.lang.String[])
+numComments=9
