@@ -32,14 +32,14 @@ public class Funcionario
 
     private float calcularSalarioPorSenioridade(float salarioBase, int anosDeServico)
     {
-        float salario = salarioBase;
+        float salario = this.salarioBase;
 
         float fatorDeSenioridade = 1.0e3f;
         float taxaDeCrescimento = 0.04f;
 
-        if(anosDeServico > 5) {
+        if(this.anosDeServico > 5) {
             salario += fatorDeSenioridade * (float)anosDeServico;
-        } else if(3 <= anosDeServico && anosDeServico <= 5) {
+        } else if(3 <= this.anosDeServico && this.anosDeServico <= 5) {
             float multiplicador = 1 + taxaDeCrescimento;
 
             for(int i = 0; i < anosDeServico; i++) {
