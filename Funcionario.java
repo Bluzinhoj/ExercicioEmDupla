@@ -68,28 +68,26 @@ public class Funcionario
 
     public float calcularSalario(int numeroDeDiasDeFalta)
     {
-        return this.calcularSalario(this.salarioBase, this.anosDeServico, numeroDeDiasDeFalta);
-    }
-
-    public float calcularSalario(float salarioBase, int anosDeServico, int numeroDeDiasDeFalta)
-    {
-        float salario = this.calcularSalarioPorSenioridade(salarioBase, anosDeServico);
+        float salario = this.calcularSalarioPorSenioridade();
         float salarioDescontado = this.aplicarDescontoPorFaltas(salario, numeroDeDiasDeFalta);
 
         return salarioDescontado;
     }
-    
-    public void atualizarDados(String nome, float salarioBase){
+
+    public void atualizarDados(String nome, float salarioBase)
+    {
         this.nome = nome;
         this.salarioBase = salarioBase;
     }
-    
-    public void atualizarDados(String nome, float salarioBase, int anosDeServico){
+
+    public void atualizarDados(String nome, float salarioBase, int anosDeServico)
+    {
         this.atualizarDados(nome, salarioBase);
         this.anosDeServico = anosDeServico;
     }
-    
-    public void apresentarDados(){
+
+    public void apresentarDados()
+    {
         System.out.println("Nome: " + this.nome);
         System.out.println("CPF: " + this.cpf);
         System.out.println("Salario Base: " + this.salarioBase);
