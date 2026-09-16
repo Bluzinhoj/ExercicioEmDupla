@@ -30,19 +30,19 @@ public class Funcionario
         this.anosDeServico = anosDeServico;
     }
 
-    private float calcularSalarioPorSenioridade(float salarioBase, int anosDeServico)
+    private float calcularSalarioPorSenioridade()
     {
-        float salario = salarioBase;
+        float salario = this.salarioBase;
 
         float fatorDeSenioridade = 1.0e3f;
         float taxaDeCrescimento = 0.04f;
 
-        if(anosDeServico > 5) {
-            salario += fatorDeSenioridade * (float)anosDeServico;
-        } else if(3 <= anosDeServico && anosDeServico <= 5) {
+        if(this.anosDeServico > 5) {
+            salario += fatorDeSenioridade * (float)this.anosDeServico;
+        } else if(3 <= this.anosDeServico && this.anosDeServico <= 5) {
             float multiplicador = 1 + taxaDeCrescimento;
 
-            for(int i = 0; i < anosDeServico; i++) {
+            for(int i = 0; i < this.anosDeServico; i++) {
                 multiplicador *= multiplicador;
             }
 
@@ -78,18 +78,21 @@ public class Funcionario
 
         return salarioDescontado;
     }
-
-    public static void main(String[] args)
-    {
-        System.out.println("teste: criar funcionarios");
-
-        Funcionario funcionario1 = new Funcionario("Robert", "8712871121");
-        Funcionario funcionario2 = new Funcionario("Jose", "19827319827", 1000);
-        Funcionario funcionario3 = new Funcionario("Helena", "9085749587", 1500, 4);
-        Funcionario funcionario4 = new Funcionario("Maria", "908587621587", 1500, 6);
-
-        // TODO: Imprimir informações dos funcionários
-
+    
+    public void atualizarDados(String nome, float salarioBase){
+        this.nome = nome;
+        this.salarioBase = salarioBase;
     }
-
+    
+    public void atualizarDados(String nome, float salarioBase, int anosDeServico){
+        this.atualizarDados(nome, salarioBase);
+        this.anosDeServico = anosDeServico;
+    }
+    
+    public void apresentarDados(){
+        System.out.println("Nome: " + this.nome);
+        System.out.println("CPF: " + this.cpf);
+        System.out.println("Salario Base: " + this.salarioBase);
+        System.out.println("Anos de Serviço: " + this.anosDeServico);
+    }
 }
